@@ -1,0 +1,18 @@
+# Dataset and generated caches never go in the repo
+data/
+*.jsonl
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Web
+web/node_modules/
+web/dist/
+
+# Env / OS
+.env
+.DS_Store

@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      PRELOAD_MATCHES: "1959846,2007721,1996436"
+    volumes:
+      - clipper-data:/data
+      # Optional: a local clone of SkillCorner/opendata (with `git lfs pull`)
+      # avoids downloading. If the folder is absent, files come from GitHub.
+      - ${OPENDATA_PATH:-../opendata}:/opendata:ro
+
+volumes:
+  clipper-data:
